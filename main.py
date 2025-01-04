@@ -14,5 +14,5 @@ if __name__ == "__main__":
    app.run(
     host='0.0.0.0',
     port=config.PORT,
-    ssl_context=(config.ROUTE_TO_FULLCHAIN_PEM, config.ROUTE_TO_PRIVKEY_PEM)
+    ssl_context=(config.PATH_TO_FULLCHAIN_PEM, config.PATH_TO_PRIVKEY_PEM)
 )
