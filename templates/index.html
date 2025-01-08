@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dynamic Number</title>
+    <title>MyRoom</title>
+    <link rel="stylesheet"  href="../static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <p>temperature: {{ temperature }}</p>
-    <p>Humidity: {{ humidity}}%</p>
+    <div id="mainDiv">
+        <h1>Welcome!</h1>
+        <p>temperature: {{ temperature }}</p>
+        <p>Humidity: {{ humidity}}%</p>
+    </div>
+    <div style="width: 80%; margin: auto; background-color: beige;" >
+        <canvas id="tempHumidityChart"></canvas>
+    </div>
+    <script src="../static/test.js" defer></script>
 </body>
 </html>

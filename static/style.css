@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(13, 17, 23);
+}
+
+#mainDiv {
+    color: rgb(222,228,234);
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
