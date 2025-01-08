@@ -7,7 +7,21 @@ from compile_data import compile_data
 print(get_data())
 
 app = Flask(__name__)
-Talisman(app)
+
+csp = {
+    'default-src': [
+        "'self'"
+    ],
+    'script-src': [
+        "'self'",
+        'https://cdn.jsdelivr.net'
+    ],
+    'style-src': [
+        "'self'",
+        'https://cdn.jsdelivr.net'
+    ],
+}
+Talisman(app, content_security_policy=csp)
 @app.route("/")
 def home():
     temperature, humidity = get_data()
