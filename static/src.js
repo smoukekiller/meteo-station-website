@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     suggestedMin: Math.min(...sampledData.temperature) - 0.2,
                     suggestedMax: Math.max(...sampledData.temperature) + 0.2,
                     grid:{
-                      color: "rgba(255, 255, 255, 0.96)"
+                      drawOnChartArea: false,
                     }
                   },
                   y1: {
