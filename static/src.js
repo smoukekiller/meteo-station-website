@@ -63,7 +63,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                     display: true,
                     position: 'left',
                     suggestedMin: Math.min(...sampledData.temperature) - 0.2,
-                    suggestedMax: Math.max(...sampledData.temperature) + 0.2
+                    suggestedMax: Math.max(...sampledData.temperature) + 0.2,
+                    grid:{
+                      color: "rgba(255, 255, 255, 0.96)"
+                    }
                   },
                   y1: {
                     type: 'linear',
