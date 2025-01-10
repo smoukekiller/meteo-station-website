@@ -37,7 +37,7 @@ def compile_data() -> tuple[list, list, list]:
     for i in last_array:
         help_array = i.split(sep=';')
         timestamp = int(help_array[0])
-        date = datetime.fromtimestamp(timestamp)
+        date = datetime.fromtimestamp(timestamp) + timedelta(hours=2)
         label = date.isoformat(sep=" ")[5:19]
         labels.append(label)
 

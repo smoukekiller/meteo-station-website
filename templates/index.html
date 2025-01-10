@@ -13,9 +13,13 @@
         <p>temperature: {{ temperature }}</p>
         <p>Humidity: {{ humidity}}%</p>
     </div>
-    <div style="width: 80%; margin: auto; background-color: beige;" >
+    <div style="width: 80%; margin: auto; background-color: rgb(189, 189, 0);" >
         <canvas id="tempHumidityChart"></canvas>
     </div>
-    <script src="../static/test.js" defer></script>
+    <div id="mainDiv">
+        <p>last_updated: {{last_updated}}</p>
+    </div>
+    <script src="../static/src.js" defer></script>
+
 </body>
 </html>
