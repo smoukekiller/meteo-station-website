@@ -62,12 +62,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                     type: 'linear',
                     display: true,
                     position: 'left',
+                    suggestedMin: Math.min(...sampledData.temperature) - 0.2,
+                    suggestedMax: Math.max(...sampledData.temperature) + 0.2
                   },
                   y1: {
                     type: 'linear',
                     display: true,
                     position: 'right',
-            
+                    suggestedMin: Math.min(...sampledData.temperature) - 2,
+                    suggestedMax: Math.max(...sampledData.temperature) + 2,
                     // grid line settings
                     grid: {
                       drawOnChartArea: false, // only want the grid lines for one axis to show up
