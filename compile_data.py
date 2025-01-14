@@ -34,18 +34,21 @@ def compile_data() -> tuple[list, list, list]:
     temp_array = []
     humid_array = []
     labels = []
+    counter = 0
     for i in last_array:
-        help_array = i.split(sep=';')
-        timestamp = int(help_array[0])
-        date = datetime.fromtimestamp(timestamp) + timedelta(hours=2)
-        label = date.isoformat(sep=" ")[5:19]
-        labels.append(label)
+        if counter % 40 == 0:
+            help_array = i.split(sep=';')
+            timestamp = int(help_array[0])
+            date = datetime.fromtimestamp(timestamp) + timedelta(hours=2)
+            label = date.isoformat(sep=" ")[5:19]
+            labels.append(label)
 
 
-        temperature = float(help_array[1])
-        humidity = float(help_array[2])
-        temp_array.append(temperature)
-        humid_array.append(humidity)
+            temperature = float(help_array[1])
+            humidity = float(help_array[2])
+            temp_array.append(temperature)
+            humid_array.append(humidity)
+        counter += 1
     start_file.close()
     end_file.close()
     return (labels, temp_array, humid_array)
