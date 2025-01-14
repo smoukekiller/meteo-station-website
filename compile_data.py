@@ -46,6 +46,7 @@ def compile_data() -> tuple[list, list, list]:
         humidity = float(help_array[2])
         temp_array.append(temperature)
         humid_array.append(humidity)
-
+    start_file.close()
+    end_file.close()
     return (labels, temp_array, humid_array)
 

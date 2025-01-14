@@ -18,4 +18,5 @@ def get_data() -> tuple[float, float, int]:
     text = file.read().split(sep='\n')[-2].split(sep=';')
     temperature = float(text[1])
     humidity = float(text[2])
+    file.close()
     return (temperature, humidity, label)
